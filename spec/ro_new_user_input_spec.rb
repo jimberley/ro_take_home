@@ -16,9 +16,9 @@ describe 'User can input personal information on apt landing', type: :feature do
   it 'entering valid user data allows for submission' do
     visit BASE_URL + 'rory/vaginal-dryness'
     @new_patient_page = NewPatientLandingPage.new
-    @new_patient_page.email_field.send_keys('Boy@george.com')
-    @new_patient_page.first_name_field.send_keys('Boy')
-    @new_patient_page.last_name_field.send_keys('George')
+    @new_patient_page.email_field.send_keys('steve@martin.com')
+    @new_patient_page.first_name_field.send_keys('Steve')
+    @new_patient_page.last_name_field.send_keys('Martin')
     @new_patient_page.password_field.send_keys('Password')
     @new_patient_page.click_agree_to_tos
     page.find_button('Start my visit').click
