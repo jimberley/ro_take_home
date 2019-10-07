@@ -4,6 +4,8 @@ A repo for the take-home exam for RO
 # Explanation
 This is a simplified structure of an RSpec/Capybara framework for testing RO's new-patient landing for `/Rory`
 
+I think a browser-based test using `localhost` (like Cypress or TestCafe) would be better for testing RO's sites, but given the lack of access to CI or a development environment, I opted to use RSpec/Capybara.
+
 The files are a `spec` file, a `page_objects` folder, an individual `page_object` for the landing page, and a `test_helper` file.
 
 The `spec` is abstracted via the `page_object` wherein individual methods and elements are listed (using `site_prism` gem) in a manner allowing for their use in plain-language within the test. (e.g. `page.find('#header').visible?` becomes `@page.header.visible?` in the test. This abstraction allows for single-place corrections in the event that a given object's ID/Locator changes in code or is removed.
