@@ -1,5 +1,5 @@
-require './test_helper'
-require './page_objects/new_patient_landing_page'
+require './spec/test_helper'
+require './spec/page_objects/new_patient_landing_page'
 
 describe 'User can input personal information on apt landing', type: :feature do
   it 'as a new user, navigates to new apt landing; correct elements appear' do
@@ -22,6 +22,7 @@ describe 'User can input personal information on apt landing', type: :feature do
     @new_patient_page.password_field.send_keys('Password')
     @new_patient_page.click_agree_to_tos
     page.find_button('Start my visit').click
+    page.find('.tabs-button', text: "Here", wait: 5000)
     expect(current_url.include?('online-visit/10')).to be_truthy
   end
 

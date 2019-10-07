@@ -1,5 +1,5 @@
 class NewPatientLandingPage < SitePrism::Page
-  require './test_helper'
+  require './spec/test_helper'
 
   element :email_field, '#temporaryEmail'
   element :first_name_field, '#firstName'
